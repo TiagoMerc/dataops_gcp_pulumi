@@ -1,4 +1,9 @@
 *.pyc
 venv/
 *.yaml/
+# Ignorar arquivos de configuração locais do Pulumi
 Pulumi.dev.yaml
+Pulumi.*.yaml.backup
+
+# Ignorar credenciais e variáveis de ambiente
+.env
