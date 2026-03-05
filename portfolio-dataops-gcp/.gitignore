@@ -5,6 +5,7 @@ venv/
 Pulumi.dev.yaml
 Pulumi.yaml
 Pulumi.*.yaml.backup
+config:
 
 # Ignorar credenciais e variáveis de ambiente
 .env

@@ -1,73 +1,79 @@
-# Pulumi GCP Python Storage Bucket Template
+# Modelo de Bucket de Armazenamento do Google Cloud Storage com Pulumi para GCP em Python
 
- A minimal Pulumi template for provisioning a Google Cloud Storage bucket using Python.
+Um modelo Pulumi minimalista para provisionar um bucket do Google Cloud Storage usando Python.
 
- This template helps you get started with Pulumi and the `pulumi-gcp` provider to create a simple storage bucket and export its URL.
+Este modelo ajuda você a começar a usar o Pulumi e o provedor `pulumi-gcp` para criar um bucket de armazenamento simples e exportar sua URL.
 
- ## When to Use
+## Quando usar
 
- - You need a quick example of using Pulumi with Google Cloud in Python.
- - You want to manage a Google Cloud Storage bucket as code.
- - You’re looking for a minimal scaffold to build more complex GCP infrastructure.
+- Você precisa de um exemplo rápido de como usar o Pulumi com o Google Cloud em Python.
 
- ## Prerequisites
+- Você quer gerenciar um bucket do Google Cloud Storage como código.
 
- - A Google Cloud account and a target GCP project.
- - Authentication set up via `gcloud auth login` or the `GOOGLE_APPLICATION_CREDENTIALS` environment variable.
- - Python 3.7 or later installed on your machine.
- - Pulumi CLI installed and logged in to your Pulumi account.
+- Você está procurando uma estrutura mínima para construir uma infraestrutura do GCP mais complexa.
 
- ## Usage
+## Pré-requisitos
 
- Run the following command to scaffold a new project from this template:
+- Uma conta do Google Cloud e um projeto GCP de destino.
+
+- Autenticação configurada via `gcloud auth login` ou a variável de ambiente `GOOGLE_APPLICATION_CREDENTIALS`.
+
+- Python 3.7 ou posterior instalado em sua máquina.
+
+- Pulumi CLI instalado e com login feito em sua conta Pulumi.
+
+## Uso
+
+Execute o seguinte comando para criar um novo projeto a partir deste modelo:
 
  ```bash
  pulumi new gcp-python
  ```
 
- Follow the interactive prompts:
- - **Project Name**: Your project name.
- - **Project Description**: A short description of your project.
- - **gcp:project**: The ID of the Google Cloud project where resources will be created.
+Siga as instruções interativas:
 
- After the project is generated, navigate into your project directory and deploy:
+- **Nome do Projeto**: O nome do seu projeto.
+- **Descrição do Projeto**: Uma breve descrição do seu projeto.
+- **gcp:project**: O ID do projeto do Google Cloud onde os recursos serão criados.
+
+Após a geração do projeto, acesse o diretório do projeto e faça a implantação:
 
  ```bash
  cd <project-name>
  pulumi up
  ```
 
- Confirm the changes to provision your storage bucket.
+ Confirme as alterações para provisionar seu bucket de armazenamento.
 
  ## Project Layout
 
  ```
  .
- ├── __main__.py        # Pulumi program defining resources
- ├── Pulumi.yaml        # Project configuration and template metadata
- └── requirements.txt   # Python dependencies for Pulumi and GCP
+ ├── __main__.py        # Recursos de definição do programa Pulumi
+ ├── Pulumi.yaml        # Configuração do projeto e metadados do modelo
+ └── requirements.txt   # Dependências do Python para Pulumi e GCP
  ```
 
  ## Configuration
 
- - **gcp:project**: (Required) The Google Cloud project ID where resources will be created.
+ - **gcp:project**: (Obrigatório) O ID do projeto do Google Cloud onde os recursos serão criados.
 
  ## Resources Created
 
- - **Storage Bucket** (`pulumi_gcp.storage.Bucket`): A bucket named `my-bucket` in the `US` location.
+ - **Storage Bucket** (`pulumi_gcp.storage.Bucket`):Um bucket de localização.
 
  ## Outputs
 
- - **bucket_name**: The URL of the created storage bucket.
+ - **bucket_name**: A URL do bucket de armazenamento criado.
 
  ## Next Steps
 
- - Modify `__main__.py` to customize the bucket:
-   - Change the bucket name.
-   - Adjust the `location` or add bucket labels and IAM policies.
- - Add more GCP resources such as Pub/Sub topics, Compute instances, or BigQuery datasets.
- - Integrate with CI/CD pipelines using `pulumi preview` and `pulumi up --yes`.
- - Explore the [Pulumi GCP Provider Documentation](https://www.pulumi.com/registry/packages/gcp/) for more examples.
+ -Modifique o arquivo `__main__.py` para personalizar o bucket:
+- Altere o nome do bucket.
+- Ajuste o `location` ou adicione rótulos e políticas do IAM ao bucket.
+- Adicione mais recursos do GCP, como tópicos do Pub/Sub, instâncias do Compute Engine ou conjuntos de dados do BigQuery.
+- Integre com pipelines de CI/CD usando `pulumi preview` e `pulumi up --yes`.
+- Consulte a [Documentação do Provedor GCP do Pulumi](https://www.pulumi.com/registry/packages/gcp/) para obter mais exemplos.
 
  ## Need Help?
 

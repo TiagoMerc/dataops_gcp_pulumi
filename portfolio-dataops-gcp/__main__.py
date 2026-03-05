@@ -12,7 +12,7 @@
 import pulumi
 from pulumi_gcp import storage, bigquery
 
-# 1. O Pulumi criando nosso Data Lake (Bucket exclusivo para o projeto)
+# 1. O Pulumi vai criar o nosso Data Lake (Bucket exclusivo para o projeto)
 data_lake_bucket = storage.Bucket(
     "ecommerce-data-lake-portfolio",
     location="US",
@@ -20,22 +20,22 @@ data_lake_bucket = storage.Bucket(
     uniform_bucket_level_access=True,
 )
 
-# 2. Criando o Dataset Raw no BigQuery (para os dados brutos)
+# 2. Estamos criando o Dataset Raw no BigQuery (para os dados brutos)
 raw_dataset = bigquery.Dataset(
     "ecommerce_raw",
     dataset_id="ecommerce_raw",
     location="US",
 )
 
-# 3. Criando o Dataset Analytics no BigQuery (para os dados transformados pelo dbt)
+# 3. Estamos criando o Dataset Analytics no BigQuery (para os dados transformados pelo dbt)
 analytics_dataset = bigquery.Dataset(
     "ecommerce_analytics",
     dataset_id="ecommerce_analytics",
     location="US",
 )
 
-# Arquivo de vendas 
 # 4. Faz o upload do arquivo CSV local para dentro do Bucket
+# Arquivo de vendas, que inseri como primeiro teste, mas depois adicionei o online_retail.csv para ter mais dados para análise mais concretas!
 arquivo_vendas = storage.BucketObject(
 "vendas-csv-upload",
 bucket=data_lake_bucket.name,
