@@ -12,7 +12,9 @@
 import pulumi
 from pulumi_gcp import storage, bigquery
 
-# 1. O Pulumi vai criar o nosso Data Lake (Bucket exclusivo para o projeto)
+# 1. O Pulumi vai criar o nosso Data Lake (Bucket exclusivo para o projeto) para os arquivos CSVs brutos, 
+# que serão usados para análises futuras. 
+
 data_lake_bucket = storage.Bucket(
     "ecommerce-data-lake-portfolio",
     location="US",
