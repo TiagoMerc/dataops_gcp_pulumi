@@ -28,7 +28,7 @@ _____
 
 ![Consultando qual foi produto mais vendido do dia 15 de junho de 2010 ](src/images/BigQuery_consultas.png)
 
-**Modelagem e provisionamento de bucket de armazenamento no Google Cloud Platform (GCP) com Pulumi (Infrastructure as Code em Python), utilizando o BigQuery e salvando as consultas para a visualização no **Looker Studio**.
+- Modelagem e provisionamento de bucket de armazenamento no Google Cloud Platform (GCP) com Pulumi (Infrastructure as Code em Python), utilizando o BigQuery e salvando as consultas para a visualização no **Looker Studio**.
 
 **Painel Varejo Online - Tela de Edição**
 
